@@ -98,8 +98,16 @@ function decrementPriceVI(){
     airJordanVIPriceChange.nodeValue = airJorVIPriceDecr;
 }
 
+//7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image.
 
-//7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
+var getImgs = document.getElementsByTagName('img');
+var changeImg = getImgs[6];
+
+changeImg.addEventListener('mouseover', changeColor);
+
+function changeColor(){
+    if(this.src === 'https://bit.ly/2UHbMRc'){this.src = "https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg"} else {this.src = 'https://bit.ly/2UHbMRc';}
+}
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
 
