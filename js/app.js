@@ -78,11 +78,26 @@ var airJorVPriceIncr = 58000;
 
 function incrementPriceV(){
     airJorVPriceIncr = airJorVPriceIncr + airJorVPriceIncr;
-    console.log(airJorVPriceIncr);
     airJordanVPriceChange.nodeValue = airJorVPriceIncr.toLocaleString('ja-JP');
 }
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
+
+var getMinus = document.getElementsByClassName('far fa-minus-square');
+
+getMinus[0].addEventListener('click', decrementPriceVI);
+
+var changeAirJordanVI = document.getElementById('price5');
+var airJordanVIChildren = changeAirJordanVI.childNodes;
+var airJordanVIPriceChange = airJordanVIChildren[0];
+
+var airJorVIPriceDecr = 2500;
+
+function decrementPriceVI(){
+    airJorVIPriceDecr = airJorVIPriceDecr - airJorVIPriceDecr;
+    airJordanVIPriceChange.nodeValue = airJorVIPriceDecr;
+}
+
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
 
