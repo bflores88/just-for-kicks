@@ -101,6 +101,7 @@ function decrementPriceVI(){
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image.
 
 var getImgs = document.getElementsByTagName('img');
+console.log(getImgs);
 var changeImg = getImgs[6];
 
 changeImg.addEventListener('mouseover', changeColor);
@@ -110,6 +111,19 @@ function changeColor(){
 }
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+
+var increaseImg = getImgs[7];
+
+increaseImg.addEventListener('click', growBy50);
+
+function growBy50(){
+    if(this.style.transform === ''){
+        this.style.transform = 'scale(1.5)';
+    } else {
+        this.style.transform = '';
+    }
+    
+}
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
