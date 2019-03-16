@@ -29,6 +29,10 @@ function hideDesc1(){
 var getName2 = document.getElementById('name2');
 getName2.addEventListener('click', showDes2);
 
+//You'll need to:
+// create a div element with an id of 'descrip2'
+//append this element to the div element with the id of 'name2'
+
 var newD2 = document.createElement('div');
 newD2.id = 'descrip2';
 newD2.style.display = 'none'
@@ -39,13 +43,26 @@ function showDes2(){
     if(descrip2.style.display !== 'block'){
         descrip2.style.display = 'block';
     } else {descrip2.style.display = 'none'}
-}
-
-//You'll need to:
-// create a div element with an id of 'descrip2'
-//append this element to the div element with the id of 'name2' 
+} 
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
+
+var allThumbs = document.getElementsByClassName('far fa-thumbs-up');
+for(var i=0; i<allThumbs.length; i++){
+    var createThumbCounter = document.createElement('div');
+    createThumbCounter.className = 'thumbCounter';
+    createThumbCounter.style.display = 'inline';
+    createThumbCounter.style.marginLeft = '5px'
+    createThumbCounter.innerHTML = '0';
+    allThumbs[i].appendChild(createThumbCounter);
+    allThumbs[i].addEventListener('click', thumbItUp);
+}
+
+function thumbItUp(){
+    var countUp = this.querySelector('.thumbCounter');
+    countUp.innerHTML ++;
+
+}
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
