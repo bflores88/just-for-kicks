@@ -1,5 +1,13 @@
 // 1. Add an event to the 'See Details' content that will create an alert box that says 'Not Available in Hawaii.' after clicking on See Details.
 
+var notHi = document.getElementById('details');
+notHi.addEventListener('click', notHawaii);
+
+function notHawaii(){
+    console.log('test');
+    alert('Not Available in Hawaii.');
+}
+
 //2. Add an event to the div element with the id of 'name1' that will show/hide the description ('descrip1') after hovering over Air Jordan II.
 
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
