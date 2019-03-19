@@ -53,7 +53,7 @@ for(var i=0; i<allThumbs.length; i++){
     createThumbCounter.className = 'thumbCounter';
     createThumbCounter.style.display = 'inline';
     createThumbCounter.style.marginLeft = '5px'
-    createThumbCounter.innerHTML = '0';
+    // createThumbCounter.innerHTML = '0';
     allThumbs[i].appendChild(createThumbCounter);
     allThumbs[i].addEventListener('click', thumbItUp);
 }
