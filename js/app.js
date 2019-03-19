@@ -72,13 +72,14 @@ getPlus[0].addEventListener('click', incrementPriceV);
 
 var changeAirJordanV = document.getElementById('price4');
 var airJordanVChildren = changeAirJordanV.childNodes;
+console.log(airJordanVChildren);
 var airJordanVPriceChange = airJordanVChildren[0];
 
 var airJorVPriceIncr = 58000;
 
 function incrementPriceV(){
     airJorVPriceIncr = airJorVPriceIncr + 58000;
-    airJordanVPriceChange.nodeValue = airJorVPriceIncr.toLocaleString('ja-JP');
+    airJordanVPriceChange.nodeValue = airJorVPriceIncr.toLocaleString('en');
 }
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
@@ -116,12 +117,17 @@ var increaseImg = getImgs[7];
 
 increaseImg.addEventListener('click', growBy50);
 
+var growMe = 250;
+
 function growBy50(){
-    if(this.style.transform === ''){
-        this.style.transform = 'scale(1.5)';
-    } else {
-        this.style.transform = '';
-    }
+    // if(this.style.transform === ''){
+    //     this.style.transform = 'scale(1.5)';
+    // } else {
+    //     this.style.transform = '';
+    // }
+    growMe = growMe * 1.5;
+    this.style.height =  growMe + 'px';
+    this.style.width = growMe + 'px';
 }
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
